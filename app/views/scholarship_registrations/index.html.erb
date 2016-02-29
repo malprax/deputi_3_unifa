@@ -1,33 +1,38 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12">
+      <h3 class="lead">Daftar Calon Peserta Beasiswa</h3>
+      <br>
+      <table class="table table-hover table-striped">
+        <thead>
+          <tr>
+            <th class="lead">Nama</th>
+            <th class="lead">Alamat</th>
+            <th class="lead">Tanggal Lahir</th>
+            <th class="lead">Agama</th>
+            <th colspan="2"></th>
+          </tr>
+        </thead>
 
-<h1>Listing Scholarship Registrations</h1>
+        <tbody>
+          <% @scholarship_registrations.each do |scholarship_registration| %>
+            <tr>
+              <td><%= link_to scholarship_registration.name, scholarship_registration %></td>
+              <td><%= scholarship_registration.address %></td>
+              <td><%= scholarship_registration.date_of_birth %></td>
+              <td><%= scholarship_registration.religion %></td>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Address</th>
-      <th>Date of birth</th>
-      <th>Religion</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+              <td><%= link_to 'Edit', edit_scholarship_registration_path(scholarship_registration) %></td>
+              <td><%= link_to 'Destroy', scholarship_registration, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
 
-  <tbody>
-    <% @scholarship_registrations.each do |scholarship_registration| %>
-      <tr>
-        <td><%= scholarship_registration.name %></td>
-        <td><%= scholarship_registration.address %></td>
-        <td><%= scholarship_registration.date_of_birth %></td>
-        <td><%= scholarship_registration.religion %></td>
-        <td><%= link_to 'Show', scholarship_registration %></td>
-        <td><%= link_to 'Edit', edit_scholarship_registration_path(scholarship_registration) %></td>
-        <td><%= link_to 'Destroy', scholarship_registration, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      <br>
 
-<br>
+      <%= link_to 'Daftar Beasiswa', new_scholarship_registration_path, class: "btn btn-success-outline" %>
 
-<%= link_to 'New Scholarship registration', new_scholarship_registration_path %>
+    </div>
+  </div>
+</div>

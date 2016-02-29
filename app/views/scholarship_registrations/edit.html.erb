@@ -1,6 +1,10 @@
-<h1>Editing Scholarship Registration</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @scholarship_registration %> |
-<%= link_to 'Back', scholarship_registrations_path %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12">
+      <h3 class="lead">Edit Calon Beasiswa</h3>
+      <%= render 'form' %>
+      <%= link_to 'Show', @scholarship_registration %> |
+      <%= link_to 'Index', scholarship_registrations_path, class: 'btn btn-standard' %>
+    </div>
+  </div>
+</div>

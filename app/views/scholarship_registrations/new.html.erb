@@ -1,5 +1,9 @@
-<h1>New Scholarship Registration</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Back', scholarship_registrations_path %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12">
+      <h3 class="lead">Daftar Calon Beasiswa</h3>
+      <%= render 'form' %>
+      <%= link_to 'Index', scholarship_registrations_path, class: 'btn btn-standard' %>
+    </div>
+  </div>
+</div>

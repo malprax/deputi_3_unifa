@@ -10,10 +10,26 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require jquery-ui
- *= require bootstrap-datepicker3
- *= require font-awesome
- *= require chosen
- *= require_tree .
- *= require_self
+
  */
+
+ // @import "bootstrap-sprockets";
+ @import "bootstrap";
+
+ @import "bootstrap-wysihtml5/bootstrap3-wysihtml5";
+ @import "lightbox-bootstrap";
+
+
+
+// @include media-breakpoint-up(xs) { ... }
+// @include media-breakpoint-up(sm) { ... }
+// @include media-breakpoint-up(md) { ... }
+// @include media-breakpoint-up(lg) { ... }
+// @include media-breakpoint-up(xl) { ... }
+//
+// // Example usage:
+// @include media-breakpoint-up(sm) {
+//   .some-class {
+//     display: block;
+//   }
+// }
