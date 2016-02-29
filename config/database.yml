@@ -30,6 +30,6 @@ test:
   port: 5432
   <<: *defaults
 
-# production:
+production:
 #   database: contact_book_production
 #   <<: *defaults
