@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Scholarship Registrations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Date of birth</th>
+      <th>Religion</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @scholarship_registrations.each do |scholarship_registration| %>
+      <tr>
+        <td><%= scholarship_registration.name %></td>
+        <td><%= scholarship_registration.address %></td>
+        <td><%= scholarship_registration.date_of_birth %></td>
+        <td><%= scholarship_registration.religion %></td>
+        <td><%= link_to 'Show', scholarship_registration %></td>
+        <td><%= link_to 'Edit', edit_scholarship_registration_path(scholarship_registration) %></td>
+        <td><%= link_to 'Destroy', scholarship_registration, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Scholarship registration', new_scholarship_registration_path %>

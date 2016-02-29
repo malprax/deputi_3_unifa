@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @scholarship_success.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @scholarship_success.address %>
+</p>
+
+<p>
+  <strong>Date of birth:</strong>
+  <%= @scholarship_success.date_of_birth %>
+</p>
+
+<p>
+  <strong>Religion:</strong>
+  <%= @scholarship_success.religion %>
+</p>
+
+<%= link_to 'Edit', edit_scholarship_success_path(@scholarship_success) %> |
+<%= link_to 'Back', scholarship_successes_path %>
