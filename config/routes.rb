@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :alumnus
+  resources :organizations
   resources :organizations
   resources :alumnus
   get 'pages/home'
