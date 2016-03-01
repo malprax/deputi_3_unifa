@@ -1,18 +1,17 @@
-<%= simple_form_for(@alumnu) do |f| %>
+<%= simple_form_for(@alumnu, html:{class:'form-horizontal'}) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :name %>
-    <%= f.input :address %>
-    <%= f.input :date_of_birth %>
-    <%= f.input :place_of_birth %>
-    <%= f.input :religion %>
-    <%= f.input :gender %>
-    <%= f.input :faculty %>
-    <%= f.input :sub_faculty %>
-  </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
+    <%= f.input :name, label: "Nama" %>
+    <%= f.input :address, label: "Alamat" %>
+    <%= f.input :place_of_birth, label: "Tempat Lahir" %>
+    <%= f.input :date_of_birth, label: "Tanggal Lahir" %>
+
+    <%= f.input :religion, label: "Agama" %>
+    <%= f.input :gender, label: "Jenis Kelamin" %>
+    <%= f.input :faculty, label: "Fakultas" %>
+    <%= f.input :sub_faculty, label: "Jurusan" %>
+
+    <%= f.button :submit, "Input" %>
+
 <% end %>
