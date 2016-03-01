@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'pages/home'
+
+  get 'pages/profil'
+
   resources :scholarship_successes
   resources :scholarship_registrations
   # The priority is based upon order of creation: first created -> highest priority.
