@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @alumnu.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @alumnu.address %>
+</p>
+
+<p>
+  <strong>Date of birth:</strong>
+  <%= @alumnu.date_of_birth %>
+</p>
+
+<p>
+  <strong>Place of birth:</strong>
+  <%= @alumnu.place_of_birth %>
+</p>
+
+<p>
+  <strong>Religion:</strong>
+  <%= @alumnu.religion %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @alumnu.gender %>
+</p>
+
+<p>
+  <strong>Faculty:</strong>
+  <%= @alumnu.faculty %>
+</p>
+
+<p>
+  <strong>Sub faculty:</strong>
+  <%= @alumnu.sub_faculty %>
+</p>
+
+<%= link_to 'Edit', edit_alumnu_path(@alumnu) %> |
+<%= link_to 'Back', alumnus_path %>
