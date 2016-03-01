@@ -1,29 +1,34 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12">
 
-<h1>Listing Organizations</h1>
+      <h3 class="lead">Daftar Organisasi Kemahasiswaan UNIFA</h3>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Content</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Nama</th>
+            <th>Isi</th>
+            <th colspan="2"></th>
+          </tr>
+        </thead>
 
-  <tbody>
-    <% @organizations.each do |organization| %>
-      <tr>
-        <td><%= organization.name %></td>
-        <td><%= organization.content %></td>
-        <td><%= link_to 'Show', organization %></td>
-        <td><%= link_to 'Edit', edit_organization_path(organization) %></td>
-        <td><%= link_to 'Destroy', organization, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+        <tbody>
+          <% @organizations.each do |organization| %>
+            <tr>
+              <td><%= link_to organization.name, organization %></td>
+              <td><%= organization.content %></td>
+              <td><%= link_to 'Edit', edit_organization_path(organization) %></td>
+              <td><%= link_to 'Hapus', organization, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
 
-<br>
+      <br>
 
-<%= link_to 'New Organization', new_organization_path %>
+      <%= link_to 'Buat Organisasi', new_organization_path, class: "btn btn-success-outline" %>
+
+    </div>
+  </div>
+</div>

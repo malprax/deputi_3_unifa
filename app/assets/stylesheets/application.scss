@@ -19,7 +19,7 @@
  @import "bootstrap-wysihtml5/bootstrap3-wysihtml5";
  @import "lightbox-bootstrap";
 
-
+// $dropdown-link-color:            $gray-primary !default;
 
 // @include media-breakpoint-up(xs) { ... }
 // @include media-breakpoint-up(sm) { ... }
@@ -48,7 +48,8 @@
      background-color: #FFF;
 }
 
-.table .th{
-    font-size: 1rem;
-    font-weight: 300 !important;
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 1px solid #eceeef;
+    font-weight: 200;
 }
