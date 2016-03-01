@@ -37,14 +37,18 @@
 
 .logo{
 
-    // height: 5%;
-    max-width: 20%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+      // height: 5%;
+      max-width: 20%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+}
 
-   }
+.bg-faded {
+     background-color: #FFF;
+}
 
-   .bg-faded {
-       background-color: #FFF;
-   }
+.table .th{
+    font-size: 1rem;
+    font-weight: 300 !important;
+}
