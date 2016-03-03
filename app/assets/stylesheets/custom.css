@@ -4,7 +4,7 @@
 *= require font-awesome
 *= require chosen
 */
-.navbar-brand {
+/*.navbar-brand {
   float: none;
 }
 .navbar-nav .nav-item {
@@ -27,4 +27,4 @@
   .navbar-nav .nav-link + .nav-link {
     margin-left: 1rem;
   }
-}
+}*/
